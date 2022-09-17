@@ -18,9 +18,6 @@ body {
   background-repeat: no-repeat;
   background-position: top;
 }
-
-header {
-}
 header div img {
   width: 100%;
   display: flex;
@@ -44,11 +41,8 @@ ul {
   background-color: rgb(153, 151, 151);
   flex-wrap: wrap; /*não deixar conteúdo da lista escapar das bordas da caixa*/
 }
-ul * {
-}
 section ul li {
   background-color: red;
-  img-width: 50px;
 }
 /* ***********ANIMATION********* */
 .profile {
