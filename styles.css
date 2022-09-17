@@ -1,95 +1,95 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+main * {
+  border: 0.01mm solid rgba(255, 0, 0, 0.137);
+}
+
+/* *********BASIC BODY CONTENT IDENTATION******** */
+
+body {
+  background-color: #121214;
+  background-position: center;
+  padding: 5%;
+  background-image: url(./assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+header {
+}
+header div img {
+  width: 100%;
+  display: flex;
+  border-radius: 50%;
+}
+main {
+  background-color: rgb(153, 151, 151);
+  padding: 5%;
+  margin: 32px auto;
+  /* max-width: 800px; */
+}
+.main-section {
+  background-color: rgb(68, 67, 67);
+  max-width: 800px;
+  padding: 1%;
+  margin: auto;
+}
+ul {
+  list-style: none; /*remover estilo da lista*/
+  display: flex;
+  background-color: rgb(153, 151, 151);
+  flex-wrap: wrap; /*não deixar conteúdo da lista escapar das bordas da caixa*/
+}
+ul * {
+}
+section ul li {
+  background-color: red;
+  img-width: 50px;
+}
+/* ***********ANIMATION********* */
+.profile {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  margin: auto;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .ring {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+#orb {
+  width: 145px;
+  height: 145px;
+  position: absolute;
+  z-index: -1;
+  background-color: #24ecff;
+  border-radius: 40%;
+  border-top: 4px solid #24ecff;
+  border-bottom: 4px solid #24ecff;
+  animation: animate 4s linear infinite;
+  box-shadow: 0 0 0 2px #24ecff33, 0 0 0 5px #24ecff22, 0 0 5px #24ecff11,
+    0 0 15px #24ecff11, 0 0 20px #24ecff, 0 0 50px #24ecff;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  main * {
-    border: 0.01mm solid rgba(255, 0, 0, 0.137);
+  100% {
+    transform: rotate(360deg);
   }
-  
-  /* *********BASIC BODY CONTENT IDENTATION******** */
-  
-  body {
-    background-color: #121214;
-    background-position: center;
-    padding: 5%;
-    background-image: url(./assets/bg.jpg);
-    background-repeat: no-repeat;
-    background-position: top;
-  }  
-  header div img {
-    width: 100%;
-    display: flex;
-    border-radius: 50%;
-  }
-  main {
-    background-color: rgb(153, 151, 151);
-    padding: 5%;
-    margin: 32px auto;
-    /* max-width: 800px; */
-  }
-  .main-section {
-    background-color: rgb(68, 67, 67);
-    max-width: 800px;
-    padding: 1%;
-    margin: auto;
-  }
-  ul {
-    list-style: none; /*remover estilo da lista*/
-    display: flex;
-    background-color: rgb(153, 151, 151);
-    flex-wrap: wrap; /*não deixar conteúdo da lista escapar das bordas da caixa*/
-  }
-  section ul li {
-    background-color: red;
-  }
-  /* ***********ANIMATION********* */
-  .profile{  
-    width: 220px;
-    height: 220px;
-    display: flex;
-    margin: auto;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;      
-  }
-  .container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .container .ring{
-    width: 150px;
-    height: 150px;
-    position: absolute;
-  }
-  #orb{
-    width: 145px;
-    height: 145px;
-    position: absolute;
-    z-index: -1;
-    background-color: #24ecff;
-    border-radius: 40%;
-    border-top: 4px solid #24ecff;
-    border-bottom: 4px solid #24ecff;
-    animation: animate 4s linear infinite;
-    box-shadow: 0 0 0 2px #24ecff33,
-      0 0 0 5px #24ecff22,
-      0 0 5px #24ecff11,
-      0 0 15px #24ecff11,
-      0 0 20px #24ecff,
-      0 0 50px #24ecff;
-  }
-  @keyframes animate{
-    0%{
-      transform: rotate(0deg);
-    }
-    100%{
-      transform: rotate(360deg);
-    }
-  }
-  
-  
+}
