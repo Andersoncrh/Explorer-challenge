@@ -4,47 +4,96 @@
   box-sizing: 0;
 }
 
-main * {
+/*main * {
   border: 0.01mm solid rgba(255, 0, 0, 0.137);
-}
+}*/
 
 /* *********BASIC BODY CONTENT IDENTATION******** */
 
 body {
+  height: 100vh;
   background-color: #121214;
   background-position: center;
-  padding: 5%;
   background-image: url(./assets/bg.jpg);
   background-repeat: no-repeat;
   background-position: top;
+  background-size: 160%;
+  background-attachment: fixed;
 }
-header div img {
-  width: 100%;
-  display: flex;
-  border-radius: 50%;
+body *{
+  font-family: 'Special Elite';
+  gap: 14px;
 }
+#innershadow {
+    box-shadow: inset 0px 0px 15px 2px #4e0361;
+    border-radius: 50%;  
+    background: url(https://github.com/andersoncrh.png);
+    background-size: 100%;
+    width: 150px;
+    
+}
+
+section div h2{
+    letter-spacing: 2px;
+}
+section div p {
+  margin-top: 10px;
+  color: #c1c1c1;
+}
+
 main {
-  background-color: rgb(153, 151, 151);
-  padding: 5%;
+  background-color: #232424a1;
+  box-shadow: 
+  0 0 60px 15px #232424;
+  display: grid;
+  max-width: 720px;
   margin: 32px auto;
-  /* max-width: 800px; */
+  border-radius: 18px;
+
 }
-.main-section {
-  background-color: rgb(68, 67, 67);
-  max-width: 800px;
-  padding: 1%;
-  margin: auto;
+section {
+  color: white;
+  width: 100%;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, .2);
+  /* background: linear-gradient(125deg, #9572FC, #43E7AD, #E2D45C, #9572FC, #43E7AD, #E2D45C); */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 
+  0 0 15px #000000;
 }
-ul {
+main section * img {
+  width: 120px;
+  border-radius: 8px;  
+  
+}
+section div {
+  background-color: #262629;
+  border-radius: 8px;
+  padding: 24px 32px 32px;
+  
+}
+section ul {
+  /*background-color: red;*/
   list-style: none; /*remover estilo da lista*/
   display: flex;
-  background-color: rgb(153, 151, 151);
+  /*background-color: rgb(153, 151, 151);*/
   flex-wrap: wrap; /*não deixar conteúdo da lista escapar das bordas da caixa*/
+  margin-top: 24px;  
+  border-radius: 8px;
+  box-shadow: inset
+  0 0 10px #0a0a0a;
+  
 }
-section ul li {
-  background-color: red;
+section ul li{  
 }
 /* ***********ANIMATION********* */
+header{
+  transition: transform .2s;
+}
+header:hover{
+  transform: scale(1.1);  
+}
 .profile {
   width: 220px;
   height: 220px;
@@ -64,20 +113,24 @@ section ul li {
 .container .ring {
   width: 150px;
   height: 150px;
-  position: absolute;
 }
 #orb {
   width: 145px;
   height: 145px;
   position: absolute;
-  z-index: -1;
-  background-color: #24ecff;
-  border-radius: 40%;
-  border-top: 4px solid #24ecff;
-  border-bottom: 4px solid #24ecff;
+  z-index: -3;
+  background-color: #7b0d9c;
+  border-radius: 42%;
+  border: 3px solid #cc09f3e3;
+  /* border-bottom: 4px solid #fffb03a4; */  
   animation: animate 4s linear infinite;
-  box-shadow: 0 0 0 2px #24ecff33, 0 0 0 5px #24ecff22, 0 0 5px #24ecff11,
-    0 0 15px #24ecff11, 0 0 20px #24ecff, 0 0 50px #24ecff;
+  box-shadow: 
+    0 0 10px  #ff24244d, 
+    0 0 0 10px #8a24ff25, 
+    0 0 10px #ff5724b7,
+    0 0 15px #ff2424, 
+    0 0 20px #24defffb, 
+    0 0 50px #7824ff;    
 }
 @keyframes animate {
   0% {
