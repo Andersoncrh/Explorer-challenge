@@ -47,7 +47,7 @@ main {
   0 0 60px 15px #232424;
   width: 100%;  
   display: grid;
-  max-width: 720px;
+  max-width: 360px;
   margin: 32px auto;
   border-radius: 18px;
 
@@ -60,19 +60,16 @@ section {
   margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: 
-  0 0 15px #000000;
+  0 0 15px #000000;  
 }
 main section * img {
-  width: 120px;
+  width: auto;
   border-radius: 8px;    
   box-shadow: 
   0 0 10px #0a0a0a;
 }
-main section * img {
-  width: 120px;
-  border-radius: 8px;    
-  box-shadow: 
-  0 0 10px #0a0a0a;
+main section * img::after{
+  z-index: -2;
 }
 section div {
   background-color: #262629;
@@ -86,18 +83,22 @@ section ul {
   display: flex;
   /*background-color: rgb(153, 151, 151);*/
   flex-wrap: wrap; /*não deixar conteúdo da lista escapar das bordas da caixa*/
-  margin-top: 24px;  
+  
   border-radius: 8px;
-  box-shadow: inset
-  0 0 15px #0a0a0a;  
-  padding: 32px
+  padding: 32px;
 }
+
 /* ***********ANIMATION********* */
-header{
-  transition: transform .2s;
-}
+
+
 header:hover{
   transform: scale(1.1);  
+  transition: transform .2s;
+}
+section div li:hover{
+  transform: scale(1.1);  
+  transition: transform .2s;
+  z-index: 2;
 }
 .profile {
   width: 220px;
@@ -137,6 +138,11 @@ header:hover{
     0 0 20px #24defffb, 
     0 0 50px #7824ff;    
 }
+.swiperbtn:hover{
+  transform: scale(1.1);  
+  transition: transform .2s;  
+  text-decoration-style: wavy;
+}
 @keyframes animate {
   0% {
     transform: rotate(0deg);
@@ -144,4 +150,54 @@ header:hover{
   100% {
     transform: rotate(360deg);
   }
+}
+/* SWIPER */
+main{
+  max-width: 580px;
+}
+section{  
+  overflow: hidden;
+}
+section ul{
+  flex-wrap: nowrap;
+  gap: 0;
+}
+#ulbox{  
+  margin-top: 24px;  
+  box-shadow: inset
+  0 0 15px #0a0a0a;  
+}
+#scrollbar{
+  display: center;
+  border-radius: 0px;
+  padding: 0px;
+  margin-left: -50px;
+  max-width: auto;
+}
+.swiperbtn{
+  background: none;
+  display: center;
+  border-radius: 0px;
+  padding: 0px;
+  max-width: auto;      
+  color: #000000;
+  text-shadow: 
+    0 0 2px  #1d048d, 
+    0 0 5px #0b2fce83, 
+    0 0 6px #ffe924,
+    0 0 7px #ff2424, 
+    0 0 10px #0d10dbfb, 
+    0 0 15px #380679,
+    0 0 10px #000000;
+}
+.swiperbtn::after{
+  color: #000000;
+}
+#mylibrary{
+  gap: unset;
+  padding: unset;
+  margin: unset;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
 }
