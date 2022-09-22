@@ -201,3 +201,6 @@ section ul{
   display: flex;
   flex-wrap: wrap;
 }
+#mylibrary svg{
+  max-width: 150px;
+}
